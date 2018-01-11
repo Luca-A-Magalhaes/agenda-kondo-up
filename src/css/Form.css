@@ -1,0 +1,29 @@
+.App-form{
+    padding: 1% 2%;
+    flex: 3;
+    text-align: center;
+}
+.App-form>div{
+    width:100%;
+}
+.App-form>div>div{
+    max-width:50%;
+    margin: 1% 2% 1% 0%;
+    display: inline-block;
+}
+.App-form input{
+    border: none;
+    width: 100%;
+    padding: 2%;
+    border-radius: 10px
+}
+.App-form button{
+    background: rgb(23, 240, 16);
+    border: none;
+    border-radius: 5%;
+    font-size: medium;
+    padding: 0.5% 1%;
+    margin: 1% 0 1% -4%;
+    color: white;
+    cursor: pointer;
+}

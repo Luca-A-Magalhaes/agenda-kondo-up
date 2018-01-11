@@ -1,0 +1,94 @@
+.App-mensagens{
+    padding: 1% 2%;
+    flex: 3;
+}
+.Mensagens-mensagem{
+    text-align: right;
+    margin: 3% 0;
+}
+.Mensagens-mensagem-corpo{
+    font-size: small;
+    background-color: rgba(127, 255, 212, 0.4);
+    border-radius: 5%;
+    padding: 1%;
+    margin: 1%;
+    max-width: 50%;
+    display: inline;
+}
+.Mensagens-mensagem-corpo>input{
+    border: none;
+    border-radius: 25px;
+    padding: 0.5%;
+    margin: 0 1%
+}
+.Mensagens-mensagem-separador{
+    font-size: 0.6vw;
+    font-weight: 600;
+    margin-left: 1%;
+    display: inline-block;
+}
+.Mensagens-mensagem-menu{
+    font-size: 0.6vw;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 1%;
+    display: inline-block;
+}
+.Mensagens-form{
+    width: 100%;
+    display: flex;
+    margin-top: 1%;
+}
+.Mensagens-form input{
+    flex:10;
+    border: none;
+    margin-right: 1%;
+    padding: 1%;
+}
+.Mensagens-form button{
+    flex: 0.1;
+    background-color: rgb(17, 214, 11);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    padding: 1% 1.1%;
+}
+.Mensagens-header{
+    border: 1px solid rgba(87, 87, 87, 0.4);
+    background-color: rgba(87, 87, 87, 0.4);
+    padding: 1%;
+    position: relative;
+  }
+  .Mensagens-header h3{
+    margin: 0;
+  }
+  .Mensagens-header p{
+    margin: 0;
+  }
+  .Mensagens-header input{
+      border: none;
+      border-radius: 20px;
+      margin: 1%;
+      padding: 0.5%;
+  }
+  .Mensagens-header-edit{
+      color: goldenrod;
+      position: absolute;
+      top: 5%;
+      right: 1%;
+      cursor: pointer;
+  }
+  .Mensagens-header-delete{
+      color: darkred;
+      position: absolute;
+      bottom: 5%;
+      right: 1%;
+      cursor: pointer;
+  }
+  .Mensagens-header-save{
+    color: rgb(17, 214, 11);
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    cursor: pointer;
+}
