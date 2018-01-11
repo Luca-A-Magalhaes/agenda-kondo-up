@@ -1,4 +1,4 @@
-##Agenda KondoUp
+## Agenda KondoUp
 
 Este projeto foi desenvolvido como teste para a vaga de Desenvolvedor React da empresa KondoUp, ele foi desenvolvido em:
 
@@ -22,16 +22,16 @@ Desenvolvido por [Luca Almeida Magalhães](https://www.linkedin.com/in/luca-alme
 
   1. **Clone o repositorio**
 
-    `git clone https://github.com/Luca-A-Magalhaes/agenda-kondo-up.git`
+    git clone https://github.com/Luca-A-Magalhaes/agenda-kondo-up.git
   
   2. **Acesse o repositorio**
 
-    `cd agenda-kondo-up`
+    cd agenda-kondo-up
   
   3. **Instale as dependencias**
 
-    `npm install`
+    npm install
 
   4. **Inicie o projeto**
 
-    `npm start`
+    npm start
