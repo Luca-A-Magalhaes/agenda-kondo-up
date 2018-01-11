@@ -16,7 +16,7 @@ Desenvolvido por [Luca Almeida Magalhães](https://www.linkedin.com/in/luca-alme
  * Alterar e excluir mensagem
  * Alterar e excluir contatos
 
- ### Instrucoes para instalação
+ ### Instruções para instalação
 
   É necessário [Git](https://git-scm.com/downloads), [Node.js e NPM](https://nodejs.org/) instalados na máquina
 
