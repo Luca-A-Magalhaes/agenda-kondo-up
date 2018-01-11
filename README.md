@@ -22,14 +22,16 @@ Desenvolvido por [Luca Almeida Magalhães](https://www.linkedin.com/in/luca-alme
 
   1. **Clone o repositorio**
 
-    `git clone https://github.com/Luca-A-Magalhaes/AgendaKondoUp`
+    `git clone https://github.com/Luca-A-Magalhaes/agenda-kondo-up.git`
   
   2. **Acesse o repositorio**
 
-    `cd AgendaKondoUp`
+    `cd agenda-kondo-up`
   
   3. **Instale as dependencias**
+
     `npm install`
 
   4. **Inicie o projeto**
+
     `npm start`
