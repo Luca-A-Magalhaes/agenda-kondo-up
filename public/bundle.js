@@ -778,7 +778,7 @@ exports.Store = undefined;
 
 var _redux = __webpack_require__(17);
 
-var _reducers = __webpack_require__(65);
+var _reducers = __webpack_require__(61);
 
 var _reducers2 = _interopRequireDefault(_reducers);
 
@@ -1416,9 +1416,9 @@ module.exports = focusNode;
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__compose__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warning__ = __webpack_require__(22);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return __WEBPACK_IMPORTED_MODULE_0__createStore__["b"]; });
@@ -1454,7 +1454,7 @@ if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' 
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActionTypes; });
 /* harmony export (immutable) */ __webpack_exports__["b"] = createStore;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_symbol_observable__);
 
 
@@ -1710,9 +1710,9 @@ var ActionTypes = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(53);
 
 
 
@@ -1782,7 +1782,7 @@ function isPlainObject(value) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(47);
 
 
 /** Built-in value references. */
@@ -19392,7 +19392,7 @@ var _Header = __webpack_require__(43);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Body = __webpack_require__(46);
+var _Body = __webpack_require__(62);
 
 var _Body2 = _interopRequireDefault(_Body);
 
@@ -19494,6 +19494,8 @@ var _react2 = _interopRequireDefault(_react);
 
 __webpack_require__(44);
 
+var _Store = __webpack_require__(5);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -19516,7 +19518,11 @@ var Header = function (_Component) {
         value: function render() {
             return _react2.default.createElement(
                 'header',
-                { className: 'App-header' },
+                { className: 'App-header', onClick: function onClick() {
+                        _Store.Store.dispatch({
+                            type: 'TOGGLE_VAZIO'
+                        });
+                    } },
                 _react2.default.createElement(
                     'h1',
                     { className: 'App-title' },
@@ -19571,238 +19577,19 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".App-header {\r\n    background-color: #222;\r\n    padding: 20px 20px 20px 5%;\r\n    color: white;\r\n  }\r\n  \r\n.App-title {\r\n  font-size: 1.5em;\r\n  cursor: default;\r\n}\r\n", ""]);
+exports.push([module.i, ".App-header {\r\n    background-color: #222;\r\n    padding: 20px 20px 20px 5%;\r\n    color: white;\r\n  }\r\n  \r\n.App-title {\r\n  font-size: 1.5em;\r\n  cursor: default;\r\n  cursor: pointer;\r\n}\r\n", ""]);
 
 // exports
 
 
 /***/ }),
 /* 46 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Contatos = __webpack_require__(47);
-
-var _Contatos2 = _interopRequireDefault(_Contatos);
-
-var _Mensagens = __webpack_require__(66);
-
-var _Mensagens2 = _interopRequireDefault(_Mensagens);
-
-var _Form = __webpack_require__(69);
-
-var _Form2 = _interopRequireDefault(_Form);
-
-__webpack_require__(72);
-
-var _Store = __webpack_require__(5);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Body = function (_Component) {
-    _inherits(Body, _Component);
-
-    function Body() {
-        _classCallCheck(this, Body);
-
-        return _possibleConstructorReturn(this, (Body.__proto__ || Object.getPrototypeOf(Body)).apply(this, arguments));
-    }
-
-    _createClass(Body, [{
-        key: 'render',
-        value: function render() {
-            var side = null;
-            if (_Store.Store.getState().toggle.form) {
-                side = _react2.default.createElement(_Form2.default, null);
-            } else if (_Store.Store.getState().toggle.mensagens) {
-                var mensagens = _Store.Store.getState().mensagens.filter(function (mensagem) {
-                    return mensagem.contato === _Store.Store.getState().toggle.contato;
-                });
-                var contato = undefined;
-                _Store.Store.getState().contatos.forEach(function (pos) {
-                    if (pos.id === _Store.Store.getState().toggle.contato) {
-                        contato = pos;
-                    }
-                });
-                side = _react2.default.createElement(_Mensagens2.default, { mensagens: mensagens, contato: contato });
-            } else {
-                side = _react2.default.createElement(
-                    'h2',
-                    null,
-                    'Adicione um contato clicando no bot\xE3o ao lado!'
-                );
-            }
-            return _react2.default.createElement(
-                'div',
-                { className: 'App-body' },
-                _react2.default.createElement(_Contatos2.default, { contatos: _Store.Store.getState().contatos }),
-                side
-            );
-        }
-    }]);
-
-    return Body;
-}(_react.Component);
-
-exports.default = Body;
-
-/***/ }),
-/* 47 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(48);
-
-var _Store = __webpack_require__(5);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Contatos = function (_Component) {
-    _inherits(Contatos, _Component);
-
-    function Contatos() {
-        _classCallCheck(this, Contatos);
-
-        return _possibleConstructorReturn(this, (Contatos.__proto__ || Object.getPrototypeOf(Contatos)).apply(this, arguments));
-    }
-
-    _createClass(Contatos, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                { className: 'App-contatos' },
-                this.props.contatos.map(function (contato, i) {
-                    return _react2.default.createElement(Contato, { nome: contato.nome, email: contato.email, contatoId: contato.id, key: i });
-                }),
-                _react2.default.createElement(
-                    'button',
-                    { className: 'Contatos-add', onClick: function onClick() {
-                            _Store.Store.dispatch({
-                                type: "TOGGLE_FORM"
-                            });
-                        } },
-                    '\u271A'
-                )
-            );
-        }
-    }]);
-
-    return Contatos;
-}(_react.Component);
-
-var Contato = function Contato(props) {
-    return _react2.default.createElement(
-        'div',
-        { className: 'Contatos-contato', onClick: function onClick() {
-                _Store.Store.dispatch({
-                    type: 'TOGGLE_MENSAGEM',
-                    contato: props.contatoId
-                });
-            } },
-        _react2.default.createElement(
-            'h2',
-            null,
-            props.nome
-        ),
-        _react2.default.createElement(
-            'h4',
-            null,
-            props.email
-        )
-    );
-};
-exports.default = Contatos;
-
-/***/ }),
-/* 48 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(49);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {"hmr":true}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(3)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js!./Contatos.css", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js!./Contatos.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 49 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(2)(false);
-// imports
-
-
-// module
-exports.push([module.i, ".App-contatos{\r\n    display: inline-block;\r\n    padding: 1% 2%;\r\n    flex: 1;\r\n}\r\n.Contatos-contato{\r\n    margin: 2% auto;\r\n    cursor: pointer;\r\n    border: 2px solid transparent;\r\n    transition: all ease-in-out 0.5s;\r\n    display: block;\r\n}\r\n.Contatos-contato>h2{\r\n    margin: 0;\r\n}\r\n.Contatos-contato>h4{\r\n    margin: 0;\r\n    color: rgba(99, 99, 99, 0.349);\r\n}\r\n.Contatos-add{\r\n    background-color: rgb(23, 240, 16);\r\n    border: none;\r\n    border-radius: 50%;\r\n    padding: 0.5% 1%;\r\n    color: black;\r\n    cursor: pointer;\r\n    font-size: 1vw;\r\n}\r\n.Contatos-add:focus{\r\n    border: none;\r\n}", ""]);
-
-// exports
-
-
-/***/ }),
-/* 50 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(50);
 
 
 
@@ -19834,11 +19621,11 @@ function baseGetTag(value) {
 
 
 /***/ }),
-/* 51 */
+/* 47 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(48);
 
 
 /** Detect free variable `self`. */
@@ -19851,7 +19638,7 @@ var root = __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__["a" /* default */] || fr
 
 
 /***/ }),
-/* 52 */
+/* 48 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19863,7 +19650,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(21)))
 
 /***/ }),
-/* 53 */
+/* 49 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19917,7 +19704,7 @@ function getRawTag(value) {
 
 
 /***/ }),
-/* 54 */
+/* 50 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19946,11 +19733,11 @@ function objectToString(value) {
 
 
 /***/ }),
-/* 55 */
+/* 51 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(52);
 
 
 /** Built-in value references. */
@@ -19960,7 +19747,7 @@ var getPrototype = Object(__WEBPACK_IMPORTED_MODULE_0__overArg_js__["a" /* defau
 
 
 /***/ }),
-/* 56 */
+/* 52 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19982,7 +19769,7 @@ function overArg(func, transform) {
 
 
 /***/ }),
-/* 57 */
+/* 53 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20018,14 +19805,14 @@ function isObjectLike(value) {
 
 
 /***/ }),
-/* 58 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(59);
+module.exports = __webpack_require__(55);
 
 
 /***/ }),
-/* 59 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20035,7 +19822,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _ponyfill = __webpack_require__(61);
+var _ponyfill = __webpack_require__(57);
 
 var _ponyfill2 = _interopRequireDefault(_ponyfill);
 
@@ -20058,10 +19845,10 @@ if (typeof self !== 'undefined') {
 
 var result = (0, _ponyfill2['default'])(root);
 exports['default'] = result;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(21), __webpack_require__(60)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(21), __webpack_require__(56)(module)))
 
 /***/ }),
-/* 60 */
+/* 56 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -20089,7 +19876,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 61 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20118,7 +19905,7 @@ function symbolObservablePonyfill(root) {
 };
 
 /***/ }),
-/* 62 */
+/* 58 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20259,7 +20046,7 @@ function combineReducers(reducers) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 63 */
+/* 59 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20313,7 +20100,7 @@ function bindActionCreators(actionCreators, dispatch) {
 }
 
 /***/ }),
-/* 64 */
+/* 60 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20369,7 +20156,7 @@ function applyMiddleware() {
 }
 
 /***/ }),
-/* 65 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20396,20 +20183,39 @@ var contato_reducer = function contato_reducer() {
                 nome: action.nome,
                 sobrenome: action.sobrenome,
                 email: action.email,
-                telefone: action.telefone
+                telefone: action.telefone,
+                editing: false
             }]);
         case 'DELETE_CONTATO':
             return state.filter(function (contato) {
                 return contato.id !== action.id;
             });
-        case 'EDIT_CONTATO':
-            return {
-                id: action.id,
-                nome: action.nome,
-                sobrenome: action.sobrenome,
-                email: action.email,
-                telefone: action.telefone
-            };
+        case 'BEGIN_EDIT_CONTATO':
+            {
+                return state.map(function (contato) {
+                    if (contato.id === action.contato.id) {
+                        return Object.assign({}, action.contato, {
+                            editing: true
+                        });
+                    }
+                    return contato;
+                });
+            }
+        case 'SAVE_EDIT_CONTATO':
+            return state.map(function (contato) {
+                if (contato.id === action.contato.id) {
+                    return {
+                        id: action.contato.id,
+                        nome: action.contato.nome,
+                        sobrenome: action.contato.sobrenome,
+                        email: action.contato.email,
+                        telefone: action.contato.telefone,
+                        editing: false
+                    };
+                }
+                return contato;
+            });
+
         default:
             return state;
     }
@@ -20424,18 +20230,34 @@ var mensagem_reducer = function mensagem_reducer() {
             return [].concat(_toConsumableArray(state), [{
                 id: mensagemIds++,
                 contato: action.contato,
-                descricao: action.descricao
+                descricao: action.descricao,
+                editing: false
             }]);
         case 'DELETE_MENSAGEM':
             return state.filter(function (mensagem) {
                 return mensagem.id !== action.id;
             });
-        case 'EDIT_MENSAGEM':
-            return {
-                id: action.id,
-                contato: action.contato,
-                descricao: action.descricao
-            };
+        case 'BEGIN_EDIT_MENSAGEM':
+            return state.map(function (mensagem) {
+                if (mensagem.id === action.mensagem.id) {
+                    return Object.assign({}, action.mensagem, {
+                        editing: true
+                    });
+                }
+                return mensagem;
+            });
+        case 'SAVE_EDIT_MENSAGEM':
+            return state.map(function (mensagem) {
+                if (mensagem.id == action.mensagem.id) {
+                    return {
+                        id: action.mensagem.id,
+                        contato: action.mensagem.contato,
+                        descricao: action.mensagem.descricao,
+                        editing: false
+                    };
+                }
+                return mensagem;
+            });
         default:
             return state;
     }
@@ -20478,6 +20300,234 @@ var Reducer = (0, _redux.combineReducers)({
 exports.default = Reducer;
 
 /***/ }),
+/* 62 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Contatos = __webpack_require__(63);
+
+var _Contatos2 = _interopRequireDefault(_Contatos);
+
+var _Mensagens = __webpack_require__(66);
+
+var _Mensagens2 = _interopRequireDefault(_Mensagens);
+
+var _Form = __webpack_require__(69);
+
+var _Form2 = _interopRequireDefault(_Form);
+
+__webpack_require__(72);
+
+var _Store = __webpack_require__(5);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Body = function (_Component) {
+    _inherits(Body, _Component);
+
+    function Body() {
+        _classCallCheck(this, Body);
+
+        return _possibleConstructorReturn(this, (Body.__proto__ || Object.getPrototypeOf(Body)).apply(this, arguments));
+    }
+
+    _createClass(Body, [{
+        key: 'render',
+        value: function render() {
+            var side = null;
+            if (_Store.Store.getState().toggle.form) {
+                side = _react2.default.createElement(_Form2.default, null);
+            } else if (_Store.Store.getState().toggle.mensagens) {
+                var mensagens = _Store.Store.getState().mensagens.filter(function (mensagem) {
+                    return mensagem.contato === _Store.Store.getState().toggle.contato;
+                });
+                var contato = undefined;
+                _Store.Store.getState().contatos.forEach(function (pos) {
+                    if (pos.id === _Store.Store.getState().toggle.contato) {
+                        contato = pos;
+                    }
+                });
+                side = _react2.default.createElement(_Mensagens2.default, { mensagens: mensagens, contato: contato });
+            } else {
+                side = _react2.default.createElement(
+                    'div',
+                    { className: 'App-Capa' },
+                    _react2.default.createElement(
+                        'h2',
+                        null,
+                        'Bem vindo a Agenda KondoUp!'
+                    ),
+                    _react2.default.createElement(
+                        'h3',
+                        null,
+                        'Para adicionar um contato clique no bot\xE3o ao lado'
+                    )
+                );
+            }
+            return _react2.default.createElement(
+                'div',
+                { className: 'App-Body' },
+                _react2.default.createElement(_Contatos2.default, { contatos: _Store.Store.getState().contatos }),
+                side
+            );
+        }
+    }]);
+
+    return Body;
+}(_react.Component);
+
+exports.default = Body;
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(64);
+
+var _Store = __webpack_require__(5);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Contatos = function (_Component) {
+    _inherits(Contatos, _Component);
+
+    function Contatos() {
+        _classCallCheck(this, Contatos);
+
+        return _possibleConstructorReturn(this, (Contatos.__proto__ || Object.getPrototypeOf(Contatos)).apply(this, arguments));
+    }
+
+    _createClass(Contatos, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: 'App-contatos' },
+                this.props.contatos.map(function (contato, i) {
+                    return _react2.default.createElement(Contato, { nome: contato.nome, email: contato.email, contatoId: contato.id, key: i });
+                }),
+                _react2.default.createElement(
+                    'button',
+                    { className: 'Contatos-add', onClick: function onClick() {
+                            _Store.Store.dispatch({
+                                type: "TOGGLE_FORM"
+                            });
+                        } },
+                    '\u271A'
+                )
+            );
+        }
+    }]);
+
+    return Contatos;
+}(_react.Component);
+
+var Contato = function Contato(props) {
+    return _react2.default.createElement(
+        'div',
+        { className: 'Contatos-contato', onClick: function onClick() {
+                _Store.Store.dispatch({
+                    type: 'TOGGLE_MENSAGEM',
+                    contato: props.contatoId
+                });
+            } },
+        _react2.default.createElement(
+            'h2',
+            null,
+            props.nome
+        ),
+        _react2.default.createElement(
+            'h4',
+            null,
+            props.email
+        )
+    );
+};
+exports.default = Contatos;
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(65);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(3)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/css-loader/index.js!./Contatos.css", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js!./Contatos.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".App-contatos{\r\n    display: inline-block;\r\n    padding: 1% 2%;\r\n    flex: 1;\r\n}\r\n.Contatos-contato{\r\n    margin: 2% auto;\r\n    cursor: pointer;\r\n    border: 2px solid transparent;\r\n    transition: all ease-in-out 0.5s;\r\n    display: block;\r\n}\r\n.Contatos-contato>h2{\r\n    margin: 0;\r\n}\r\n.Contatos-contato>h4{\r\n    margin: 0;\r\n    color: rgba(99, 99, 99, 0.349);\r\n}\r\n.Contatos-add{\r\n    background-color: rgb(23, 240, 16);\r\n    border: none;\r\n    border-radius: 50%;\r\n    padding: 0.5% 1%;\r\n    color: black;\r\n    cursor: pointer;\r\n    font-size: 1vw;\r\n    min-width: 20px;\r\n}\r\n.Contatos-add:focus{\r\n    border: none;\r\n}", ""]);
+
+// exports
+
+
+/***/ }),
 /* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20506,26 +20556,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-/*const lista_mensagens = [
-    {
-        id: 0,
-        contato: 0,
-        descricao: "Primeira Mensagem"
-    },
-    {
-        id: 0,
-        contato: 0,
-        descricao: "Segunda Mensagem"
-    }
-]
-/*
-const contato = {
-    id: 0,
-        nome: "Fulano",
-        sobrenome: "Da Silva",
-        email: "fulano@email.com",
-        telefone: "041999999999"
-}*/
 var Mensagens = function (_Component) {
     _inherits(Mensagens, _Component);
 
@@ -20573,81 +20603,288 @@ var Mensagens = function (_Component) {
     return Mensagens;
 }(_react.Component);
 
-var MensagemHeader = function MensagemHeader(props) {
-    console.log(props.contato);
-    console.log(_Store.Store.getState());
-    return _react2.default.createElement(
-        'div',
-        { className: 'Mensagens-header' },
-        _react2.default.createElement(
-            'div',
-            null,
-            _react2.default.createElement(
-                'h3',
-                null,
-                props.contato.nome.concat(" ", props.contato.sobrenome)
-            ),
-            _react2.default.createElement(
-                'p',
-                null,
-                props.contato.email.concat(" | ", props.contato.telefone)
-            )
-        ),
-        _react2.default.createElement(
-            'div',
-            { className: 'Mensagens-header-menu' },
-            _react2.default.createElement(
-                'span',
-                { className: 'Mensagens-header-edit' },
-                '\u2710'
-            ),
-            _react2.default.createElement(
-                'span',
-                { className: 'Mensagens-header-delete', onClick: function onClick() {
-                        _Store.Store.dispatch({
-                            type: 'DELETE_CONTATO',
-                            id: props.contato.id
-                        });
-                        _Store.Store.dispatch({
-                            type: 'TOGGLE_VAZIO'
-                        });
-                    } },
-                '\u2715'
-            )
-        )
-    );
-};
-var Mensagem = function Mensagem(props) {
-    return _react2.default.createElement(
-        'div',
-        { className: 'Mensagens-mensagem' },
-        _react2.default.createElement(
-            'p',
-            null,
-            props.mensagem.descricao,
-            _react2.default.createElement(
-                'a',
-                null,
-                'editar'
-            ),
-            _react2.default.createElement(
-                'span',
-                null,
-                '|'
-            ),
-            _react2.default.createElement(
-                'a',
-                { onClick: function onClick() {
-                        _Store.Store.dispatch({
-                            type: 'DELETE_MENSAGEM',
-                            id: props.mensagem.id
-                        });
-                    } },
-                'excluir'
-            )
-        )
-    );
-};
+var MensagemHeader = function (_Component2) {
+    _inherits(MensagemHeader, _Component2);
+
+    function MensagemHeader(props) {
+        _classCallCheck(this, MensagemHeader);
+
+        var _this3 = _possibleConstructorReturn(this, (MensagemHeader.__proto__ || Object.getPrototypeOf(MensagemHeader)).call(this, props));
+
+        _this3.handleNome = _this3.handleNome.bind(_this3);
+        _this3.handleSobrenome = _this3.handleSobrenome.bind(_this3);
+        _this3.handleEmail = _this3.handleEmail.bind(_this3);
+        _this3.handleTelefone = _this3.handleTelefone.bind(_this3);
+        _this3.state = {
+            id: props.contato.id,
+            nome: props.contato.nome,
+            sobrenome: props.contato.sobrenome,
+            email: props.contato.email,
+            telefone: props.contato.telefone
+        };
+        return _this3;
+    }
+
+    _createClass(MensagemHeader, [{
+        key: 'handleNome',
+        value: function handleNome(event) {
+            this.setState(Object.assign({}, this.state, {
+                nome: event.target.value
+            }));
+        }
+    }, {
+        key: 'handleSobrenome',
+        value: function handleSobrenome(event) {
+            this.setState(Object.assign({}, this.state, {
+                sobrenome: event.target.value
+            }));
+        }
+    }, {
+        key: 'handleEmail',
+        value: function handleEmail(event) {
+            this.setState(Object.assign({}, this.state, {
+                email: event.target.value
+            }));
+        }
+    }, {
+        key: 'handleTelefone',
+        value: function handleTelefone(event) {
+            this.setState(Object.assign({}, this.state, {
+                telefone: event.target.value
+            }));
+        }
+    }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(nextProps) {
+            if (this.state.id !== nextProps.contato.id) {
+                this.setState({
+                    id: nextProps.contato.id,
+                    nome: nextProps.contato.nome,
+                    sobrenome: nextProps.contato.sobrenome,
+                    email: nextProps.contato.email,
+                    telefone: nextProps.contato.telefone
+                });
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this4 = this;
+
+            var corpo = undefined;
+            if (this.props.contato.editing) {
+                corpo = _react2.default.createElement(
+                    'div',
+                    { className: 'Mensagens-header' },
+                    _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(
+                            'div',
+                            null,
+                            _react2.default.createElement('input', { type: 'text', value: this.state.nome, onChange: this.handleNome }),
+                            _react2.default.createElement('input', { type: 'text', value: this.state.sobrenome, onChange: this.handleSobrenome })
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            null,
+                            _react2.default.createElement('input', { type: 'text', value: this.state.email, onChange: this.handleEmail }),
+                            _react2.default.createElement('input', { type: 'text', value: this.state.telefone, onChange: this.handleTelefone })
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'Mensagens-header-menu' },
+                        _react2.default.createElement(
+                            'span',
+                            { className: 'Mensagens-header-save', onClick: function onClick() {
+                                    var novoContato = Object.assign({}, _this4.props.contato, {
+                                        nome: _this4.state.nome,
+                                        sobrenome: _this4.state.sobrenome,
+                                        email: _this4.state.email,
+                                        telefone: _this4.state.telefone
+                                    });
+                                    _Store.Store.dispatch({
+                                        type: 'SAVE_EDIT_CONTATO',
+                                        contato: novoContato
+                                    });
+                                } },
+                            '\u2714'
+                        ),
+                        _react2.default.createElement(
+                            'span',
+                            { className: 'Mensagens-header-delete', onClick: function onClick() {
+                                    _Store.Store.dispatch({
+                                        type: 'DELETE_CONTATO',
+                                        id: _this4.props.contato.id
+                                    });
+                                    _Store.Store.dispatch({
+                                        type: 'TOGGLE_VAZIO'
+                                    });
+                                } },
+                            '\u2715'
+                        )
+                    )
+                );
+            } else {
+                corpo = _react2.default.createElement(
+                    'div',
+                    { className: 'Mensagens-header' },
+                    _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(
+                            'h3',
+                            null,
+                            this.props.contato.nome.concat(" ", this.props.contato.sobrenome)
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            this.props.contato.email.concat(" | ", this.props.contato.telefone)
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'Mensagens-header-menu' },
+                        _react2.default.createElement(
+                            'span',
+                            { className: 'Mensagens-header-edit', onClick: function onClick() {
+                                    _Store.Store.dispatch({
+                                        type: 'BEGIN_EDIT_CONTATO',
+                                        contato: _this4.props.contato
+                                    });
+                                } },
+                            '\u2710'
+                        ),
+                        _react2.default.createElement(
+                            'span',
+                            { className: 'Mensagens-header-delete', onClick: function onClick() {
+                                    _Store.Store.dispatch({
+                                        type: 'DELETE_CONTATO',
+                                        id: _this4.props.contato.id
+                                    });
+                                    _Store.Store.dispatch({
+                                        type: 'TOGGLE_VAZIO'
+                                    });
+                                } },
+                            '\u2715'
+                        )
+                    )
+                );
+            }
+            return corpo;
+        }
+    }]);
+
+    return MensagemHeader;
+}(_react.Component);
+
+var Mensagem = function (_Component3) {
+    _inherits(Mensagem, _Component3);
+
+    function Mensagem(props) {
+        _classCallCheck(this, Mensagem);
+
+        var _this5 = _possibleConstructorReturn(this, (Mensagem.__proto__ || Object.getPrototypeOf(Mensagem)).call(this, props));
+
+        _this5.handleChange = _this5.handleChange.bind(_this5);
+        _this5.state = {
+            value: _this5.props.mensagem.descricao
+        };
+        return _this5;
+    }
+
+    _createClass(Mensagem, [{
+        key: 'handleChange',
+        value: function handleChange(event) {
+            this.setState({
+                value: event.target.value
+            });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this6 = this;
+
+            var corpo = undefined;
+            if (this.props.mensagem.editing) {
+                corpo = _react2.default.createElement(
+                    'div',
+                    { className: 'Mensagens-mensagem-corpo' },
+                    _react2.default.createElement('input', { type: 'text', value: this.state.value, onChange: this.handleChange }),
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'Mensagens-mensagem-menu', onClick: function onClick() {
+                                var novaMensagem = Object.assign({}, _this6.props.mensagem, {
+                                    descricao: _this6.state.value
+                                });
+                                _Store.Store.dispatch({
+                                    type: 'SAVE_EDIT_MENSAGEM',
+                                    mensagem: novaMensagem
+                                });
+                            } },
+                        'salvar'
+                    ),
+                    _react2.default.createElement(
+                        'span',
+                        { className: 'Mensagens-mensagem-separador' },
+                        '|'
+                    ),
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'Mensagens-mensagem-menu', onClick: function onClick() {
+                                _Store.Store.dispatch({
+                                    type: 'DELETE_MENSAGEM',
+                                    id: _this6.props.mensagem.id
+                                });
+                            } },
+                        'excluir'
+                    )
+                );
+            } else {
+                corpo = _react2.default.createElement(
+                    'p',
+                    { className: 'Mensagens-mensagem-corpo' },
+                    this.props.mensagem.descricao,
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'Mensagens-mensagem-menu', onClick: function onClick() {
+                                _Store.Store.dispatch({
+                                    type: 'BEGIN_EDIT_MENSAGEM',
+                                    mensagem: _this6.props.mensagem
+                                });
+                            } },
+                        'editar'
+                    ),
+                    _react2.default.createElement(
+                        'span',
+                        { className: 'Mensagens-mensagem-separador' },
+                        '|'
+                    ),
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'Mensagens-mensagem-menu', onClick: function onClick() {
+                                _Store.Store.dispatch({
+                                    type: 'DELETE_MENSAGEM',
+                                    id: _this6.props.mensagem.id
+                                });
+                            } },
+                        'excluir'
+                    )
+                );
+            }
+            return _react2.default.createElement(
+                'div',
+                { className: 'Mensagens-mensagem' },
+                corpo
+            );
+        }
+    }]);
+
+    return Mensagem;
+}(_react.Component);
+
 exports.default = Mensagens;
 
 /***/ }),
@@ -20690,7 +20927,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".App-mensagens{\r\n    padding: 1% 2%;\r\n    flex: 3;\r\n}\r\n.Mensagens-mensagem{\r\n    text-align: right;\r\n    margin: 3% 0;\r\n}\r\n.Mensagens-mensagem p{\r\n    font-size: small;\r\n    background-color: rgba(127, 255, 212, 0.4);\r\n    border-radius: 5%;\r\n    padding: 1%;\r\n    margin: 1%;\r\n    max-width: 50%;\r\n    display: inline;\r\n}\r\n.Mensagens-mensagem p>span{\r\n    font-size: 0.5vw;\r\n    font-weight: 600;\r\n    margin-left: 1%;\r\n    display: inline-block;\r\n}\r\n.Mensagens-mensagem p>a{\r\n    font-size: 0.5vw;\r\n    font-weight: 600;\r\n    cursor: pointer;\r\n    margin-left: 1%;\r\n    display: inline-block;\r\n}\r\n.Mensagens-form{\r\n    width: 100%;\r\n    display: flex;\r\n    margin-top: 1%;\r\n}\r\n.Mensagens-form input{\r\n    flex:10;\r\n    border: none;\r\n    margin-right: 1%;\r\n    padding: 1%;\r\n}\r\n.Mensagens-form button{\r\n    flex: 0.1;\r\n    background-color: rgb(17, 214, 11);\r\n    border-radius: 50%;\r\n    border: none;\r\n    cursor: pointer;\r\n    padding: 1% 1.1%;\r\n}\r\n.Mensagens-header{\r\n    border: 1px solid rgba(87, 87, 87, 0.4);\r\n    background-color: rgba(87, 87, 87, 0.4);\r\n    padding: 1%;\r\n    position: relative;\r\n  }\r\n  .Mensagens-header h3{\r\n    margin: 0;\r\n  }\r\n  .Mensagens-header p{\r\n    margin: 0;\r\n  }\r\n  .Mensagens-header-edit{\r\n      color: goldenrod;\r\n      position: absolute;\r\n      top: 5%;\r\n      right: 1%;\r\n      cursor: pointer;\r\n  }\r\n  .Mensagens-header-delete{\r\n      color: darkred;\r\n      position: absolute;\r\n      bottom: 5%;\r\n      right: 1%;\r\n      cursor: pointer;\r\n  }", ""]);
+exports.push([module.i, ".App-mensagens{\r\n    padding: 1% 2%;\r\n    flex: 3;\r\n}\r\n.Mensagens-mensagem{\r\n    text-align: right;\r\n    margin: 3% 0;\r\n}\r\n.Mensagens-mensagem-corpo{\r\n    font-size: small;\r\n    background-color: rgba(127, 255, 212, 0.4);\r\n    border-radius: 5%;\r\n    padding: 1%;\r\n    margin: 1%;\r\n    max-width: 50%;\r\n    display: inline;\r\n}\r\n.Mensagens-mensagem-corpo>input{\r\n    border: none;\r\n    border-radius: 25px;\r\n    padding: 0.5%;\r\n    margin: 0 1%\r\n}\r\n.Mensagens-mensagem-separador{\r\n    font-size: 0.6vw;\r\n    font-weight: 600;\r\n    margin-left: 1%;\r\n    display: inline-block;\r\n}\r\n.Mensagens-mensagem-menu{\r\n    font-size: 0.6vw;\r\n    font-weight: 600;\r\n    cursor: pointer;\r\n    margin-left: 1%;\r\n    display: inline-block;\r\n}\r\n.Mensagens-form{\r\n    width: 100%;\r\n    display: flex;\r\n    margin-top: 1%;\r\n}\r\n.Mensagens-form input{\r\n    flex:10;\r\n    border: none;\r\n    margin-right: 1%;\r\n    padding: 1%;\r\n}\r\n.Mensagens-form button{\r\n    flex: 0.1;\r\n    background-color: rgb(17, 214, 11);\r\n    border-radius: 50%;\r\n    border: none;\r\n    cursor: pointer;\r\n    padding: 1% 1.1%;\r\n}\r\n.Mensagens-header{\r\n    border: 1px solid rgba(87, 87, 87, 0.4);\r\n    background-color: rgba(87, 87, 87, 0.4);\r\n    padding: 1%;\r\n    position: relative;\r\n  }\r\n  .Mensagens-header h3{\r\n    margin: 0;\r\n  }\r\n  .Mensagens-header p{\r\n    margin: 0;\r\n  }\r\n  .Mensagens-header input{\r\n      border: none;\r\n      border-radius: 20px;\r\n      margin: 1%;\r\n      padding: 0.5%;\r\n  }\r\n  .Mensagens-header-edit{\r\n      color: goldenrod;\r\n      position: absolute;\r\n      top: 5%;\r\n      right: 1%;\r\n      cursor: pointer;\r\n  }\r\n  .Mensagens-header-delete{\r\n      color: darkred;\r\n      position: absolute;\r\n      bottom: 5%;\r\n      right: 1%;\r\n      cursor: pointer;\r\n  }\r\n  .Mensagens-header-save{\r\n    color: rgb(17, 214, 11);\r\n    position: absolute;\r\n    top: 5%;\r\n    right: 1%;\r\n    cursor: pointer;\r\n}", ""]);
 
 // exports
 
@@ -20863,7 +21100,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".App-form{\r\n    padding: 1% 2%;\r\n    flex: 3;\r\n}\r\n.App-form>div{\r\n    width:100%;\r\n}\r\n.App-form>div>div{\r\n    max-width:50%;\r\n    margin: 1% 2% 1% 0%;\r\n    display: inline-block;\r\n}\r\n.App-form input{\r\n    border: none;\r\n    width: 100%;\r\n    padding: 2%;\r\n    border-radius: 10px\r\n}\r\n.App-form button{\r\n    background: rgb(23, 240, 16);\r\n    border: none;\r\n    border-radius: 5%;\r\n    font-size: medium;\r\n    padding: 0.5% 1%;\r\n    margin: 1% 0;\r\n    color: white;\r\n    cursor: pointer;\r\n}", ""]);
+exports.push([module.i, ".App-form{\r\n    padding: 1% 2%;\r\n    flex: 3;\r\n    text-align: center;\r\n}\r\n.App-form>div{\r\n    width:100%;\r\n}\r\n.App-form>div>div{\r\n    max-width:50%;\r\n    margin: 1% 2% 1% 0%;\r\n    display: inline-block;\r\n}\r\n.App-form input{\r\n    border: none;\r\n    width: 100%;\r\n    padding: 2%;\r\n    border-radius: 10px\r\n}\r\n.App-form button{\r\n    background: rgb(23, 240, 16);\r\n    border: none;\r\n    border-radius: 5%;\r\n    font-size: medium;\r\n    padding: 0.5% 1%;\r\n    margin: 1% 0 1% -4%;\r\n    color: white;\r\n    cursor: pointer;\r\n}", ""]);
 
 // exports
 
@@ -20908,7 +21145,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".App-intro {\r\n    font-size: large;\r\n}\r\n.App-body{\r\n    width: 100%;\r\n    height: 100%;\r\n    display: flex;\r\n}\r\n  ", ""]);
+exports.push([module.i, ".App-intro {\r\n    font-size: large;\r\n}\r\n.App-Body{\r\n    width: 100%;\r\n    height: 100%;\r\n    display: flex;\r\n}\r\n.App-Capa{\r\n    padding: 1% 2%;\r\n    flex: 3;\r\n    text-align: center;\r\n}", ""]);
 
 // exports
 
